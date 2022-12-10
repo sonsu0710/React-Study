@@ -29,3 +29,10 @@ ReactDOM.createRoot(document.querySelector('#root')).render(<LikeButton/>); // R
 
 ## Class Component의 단점
 1. this 바인딩이 불편하다. => Function Component에서는 화살표 함수로 this 바인딩이 가능. (사실 this 쓸 일이 없긴 함)
+
+## setState로 이전 state를 사용하고 싶은 경우
+setState((prevState) => {prevState.value})
+
+## Component가 unmount될 때 화면을 딱 한번만 렌더링 시키고 싶은 경우
+1. useRef 사용
+2. useEffect 에서 deph를 빈 배열로 두기
